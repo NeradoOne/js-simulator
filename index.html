@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="https://res.cloudinary.com/hdsqazxtw/image/upload/v1558445735/android-icon-192x192_bnwso6.png"
+            type="image/x-icon"
+        />
+        <title>Desafío 2 | CoderHouse</title>
+        <!-- Bootstrap para los estilos -->
+        <link
+            rel="stylesheet"
+            href="https://bootswatch.com/5/cyborg/bootstrap.min.css"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css" />
+        <!-- Linkeo de script -->
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+<!-- Modal de Salida -->
+        <div class="modal fade" id="staticBackdrop">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" >Carrito</h5>
+                    <button id="cerrar" type="button" class="btn-close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <h3 id="salidaPrecio"></h3>
+                    <h4 id="salidaCuotas"></h4>
+                    <h4 id="salidaItems"></h4>
+                    </div>
+                    <div class="modal-footer">
+                    <button id="volver" type="button" class="btn btn-secondary">Volver</button>
+                    <button id="pagar" type="button" class="btn btn-primary">Cotizar de nuevo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>Simulador interactivo</h1>
+            <h2 class="text-center">Armado de PC</h2>
+            <button type="button" class="my-4 btn btn-lg btn-primary" id="boton">
+                Mostrar Carrito
+            </button>
+            <div class="card-container container-fluid md-col-10">
+                <!-- CARD 1 -->
+                <div class="card">
+                    <img
+                        src="https://logodownload.org/wp-content/uploads/2014/04/intel-logo-5-1.png"
+                        class="card-img-top"
+                        alt="Procesador Intel"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Intel i7 12700K |<br />Procesador <span class="badge bg-success">56.000 $ARS</span>
+                        </h5>
+                        <p class="card-text">
+                            Procesador de escritorio 12 núcleos de hasta 5.0 GHz
+                            LGA1700 600 Series 125W.
+                        </p>
+                        <button id="procesador" class="carrito d-flex justify-content-center btn btn-primary">
+                            Añadir Producto
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card">
+                    <img
+                        src="https://dlcdnwebimgs.asus.com/gain/30b85b5d-082c-4b9e-9b89-9b28a957c576/w692"
+                        class="card-img-top"
+                        alt="Tarjeta madre ASUS"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Asus H670-Pro | <br />Tarjeta madre
+                            <span class="badge bg-success">27.000 $ARS</span>
+                        </h5>
+                        <p class="card-text">
+                            Tarjeta madre Intel® H670 (LGA 1700) ATX con puerto
+                            PCIe 5.0, cuatro puertos PCIe 4.0 M.2.
+                        </p>
+                        <button id="mother" class="carrito d-flex justify-content-center btn btn-primary"
+                            >Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card">
+                    <img
+                        src="https://images.samsung.com/is/image/samsung/latin-t35f-lf24t350fhlxzp-rperspectiveblack-301443689?$684_547_PNG$"
+                        class="card-img-top"
+                        alt="Monitor Samsung"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Samsung T350 |<br />Monitor
+                            <span class="badge bg-success">30.000 $ARS</span>
+                        </h5>
+                        <p class="card-text">
+                            Monitor de computadora FHD 1080p de 27 pulgadas, 75
+                            Hz, panel IPS, HDMI, VGA (D-Sub), FreeSync.
+                        </p>
+                        <button id="monitor" class="carrito d-flex justify-content-center btn btn-primary"
+                            >Añadir al Carrito</button
+                        >
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="card">
+                    <img
+                        src="https://www.corsair.com/medias/sys_master/images/images/h12/haf/9793634566174/CMH32GX4M2K4000C18/Gallery/VENGEANCE_RGB_PRO_SL_BLACK_01/-CMH32GX4M2K4000C18-Gallery-VENGEANCE-RGB-PRO-SL-BLACK-01.png_1200Wx1200H"
+                        class="card-img-top"
+                        alt="Memorias Ram"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Corsair Kit |<br />Memoria Ram
+                            <span class="badge bg-success">18.000 $ARS</span>
+                        </h5>
+                        <p class="card-text">
+                            Kit de memoria RAM DDR4 a 4000 MHz VENGEANCE RGB PRO SL de 32 GB (2 x 16 GB) C18.
+                        </p>
+                        <button id="ram" class="carrito d-flex justify-content-center btn btn-primary"
+                            >Añadir al Carrito</button
+                        >
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="card">
+                    <img
+                        src="https://aerocool.io/wp-content/uploads/2020/02/Flo-Tempered-Glass-Infographic700x700px-1.png"
+                        class="card-img-top"
+                        alt="Tarjeta madre ASUS"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Aerocool Saturn | <br /> Gabinete
+                            <span class="badge bg-success">8.000 $ARS</span>
+                        </h5>
+                        <p class="card-text">
+                            Gabinete para PC, 5 ventiladores, FRGB, vidrio templado, ATX, Micro-ATX, Mini-ITX.</p>
+                        <button id="chasis" class="carrito d-flex justify-content-center btn btn-primary"
+                            >Añadir al Carrito</button
+                        >
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="card">
+                    <img
+                        src="https://www.corsair.com/medias/sys_master/images/images/hbf/h37/9112331878430/-CH-9206115-NA-Gallery-K55-RGB-Harpoon-NA-01.png"
+                        class="card-img-top"
+                        alt="Monitor Samsung"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Corsair Bundle |<br />Teclado & Mouse
+                            <span class="badge bg-success">7.500 $ARS</span>
+                        </h5>
+                        <p class="card-text">
+                            Kit Teclado Mouse Corsair K55-Harpoon con iluminación RGB, Botones macro, 6000 DPI.
+                        </p>
+                        <butto id="kit" class="carrito d-flex justify-content-center btn btn-primary">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+
+        </div>
+    </body>
+</html>
