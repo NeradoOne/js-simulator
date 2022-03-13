@@ -1,7 +1,7 @@
 const listaPrecios = {
-    procesador: 56000,
-    mother : 27000,
-    monitor : 30000,
+    procesador: 62000,
+    mother : 28500,
+    monitor : 31000,
     ram : 18000,
     chasis : 8000,
     kit : 7500
